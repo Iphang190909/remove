@@ -3,17 +3,17 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:remove/common/theme.dart';
 import 'package:remove/data/page/home_page.dart';
-import 'package:remove/data/page/signup_page.dart';
+import 'package:remove/data/page/login_page.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
-  static const routeName = '/login_page';
+class SignupPage extends StatefulWidget {
+  const SignupPage({Key? key}) : super(key: key);
+  static const routeName = '/signup_page';
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -137,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: MaterialButton(
                   onPressed: () => Navigator.pushNamed(
                     context,
-                    SignupPage.routeName,
+                    HomePage.routeName,
                   ),
                   color: kTextLightColor,
                   child: const Text(
