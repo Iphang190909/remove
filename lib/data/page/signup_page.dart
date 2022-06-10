@@ -23,15 +23,19 @@ class _SignupPageState extends State<SignupPage> {
         //child: Center(
         child: SingleChildScrollView(
           child: Column(
-            children: [
-              Image.asset('assets/images/logo_login.png'),
-              const SizedBox(
-                height: 25,
+            children: [ 
+              const Padding(
+                padding: EdgeInsets.only(right: 230),
+                child: Text('SIGN UP',
+                style: TextStyle(
+                  fontSize: 26,
+                  color: kPrimaryColor 
+                ),),
               ),
               const Padding(
                 padding: EdgeInsets.only(right: 30),
                 child: Text(
-                  'Sign In now, and find your favorite movies',
+                  'Sign Up now, and find your favorite movies',
                   style: TextStyle(
                       fontSize: 15,
                       //fontWeight: FontWeight.bold,
@@ -39,9 +43,32 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               ),
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
               TextField(
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  errorBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  labelText: 'Type your username',
+                  labelStyle: const TextStyle(
+                      fontFamily: 'poppins', color: kTextLightColor),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextField(
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -77,30 +104,82 @@ class _SignupPageState extends State<SignupPage> {
                   errorBorder: const OutlineInputBorder(
                     borderSide: BorderSide(width: 3, color: kPrimaryColor),
                   ),
+                  labelText: 'Type your phone',
+                  labelStyle: const TextStyle(
+                      fontFamily: 'poppins', color: kTextLightColor),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextField(
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  errorBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  labelText: 'Type your birthday',
+                  labelStyle: const TextStyle(
+                      fontFamily: 'poppins', color: kTextLightColor),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextField(
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  errorBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
                   labelText: 'Type your password',
                   labelStyle: const TextStyle(
                       fontFamily: 'poppins', color: kTextLightColor),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      print('Forgotted Password!');
-                    },
-                    child: const Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        color: kTextLightColor,
-                        fontSize: 12.0,
-                      ),
-                    ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextField(
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
+                decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(width: 3, color: kPrimaryColor),
                   ),
-                ],
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  errorBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(width: 3, color: kPrimaryColor),
+                  ),
+                  labelText: 'Type your re-type password',
+                  labelStyle: const TextStyle(
+                      fontFamily: 'poppins', color: kTextLightColor),
+                ),
               ),
               const SizedBox(
-                height: 15,
+                height: 30,
               ),
               Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -112,39 +191,14 @@ class _SignupPageState extends State<SignupPage> {
                 child: MaterialButton(
                   onPressed: () => Navigator.pushNamed(
                     context,
-                    HomePage.routeName,
+                    LoginPage.routeName,
                   ),
                   color: kPrimaryColor,
                   child: const Text(
-                    'Sign In',
+                    'Crate Account',
                     style: TextStyle(
                       fontSize: 17,
                       color: kTextLightColor,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                width: double.infinity,
-                height: 40,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: MaterialButton(
-                  onPressed: () => Navigator.pushNamed(
-                    context,
-                    HomePage.routeName,
-                  ),
-                  color: kTextLightColor,
-                  child: const Text(
-                    'Create New Account',
-                    style: TextStyle(
-                      fontSize: 17,
-                      color: kSecondaryColor,
                     ),
                   ),
                 ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 import 'package:remove/common/result_state.dart';
+import 'package:remove/common/theme.dart';
 import 'package:remove/data/api/api_service.dart';
 import 'package:remove/data/model/movie.dart';
 import 'package:remove/data/provider/movie_provider.dart';
@@ -39,7 +40,7 @@ class MovieDashboard extends StatelessWidget {
               } else if (state.state == ResultState.error) {
                 return const Expanded(
                   child: Center(
-                    child: Text('Errorrr'),
+                    child: Text('Errorrr',style: TextStyle(color: Colors.white), ),
                   ),
                 );
               } else {

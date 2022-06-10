@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:remove/common/theme.dart';
 import 'package:remove/data/api/api_service.dart';
 import 'package:remove/data/page/home_page.dart';
+import 'package:remove/data/page/signup_page.dart';
 import 'package:remove/data/page/login_page.dart';
 import 'package:remove/data/page/splashscreen.dart';
 import 'package:remove/data/provider/movie_provider.dart';

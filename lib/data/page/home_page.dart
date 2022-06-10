@@ -23,19 +23,19 @@ class _HomePageState extends State<HomePage> {
   final List<BottomNavigationBarItem> _bottomNavBarItems = [
     const BottomNavigationBarItem(
       icon: Icon(Icons.movie),
-      label: '',
+      label: 'Home',
     ),
     const BottomNavigationBarItem(
-      icon: Icon(Icons.topic),
-      label: '',
+      icon: Icon(Icons.video_library),
+      label: 'Watchlist',
     ),
     const BottomNavigationBarItem(
       icon: Icon(Icons.notifications),
-      label: '',
+      label: 'Notifications',
     ),
     const BottomNavigationBarItem(
       icon: Icon(Icons.account_circle),
-      label: '',
+      label: 'Account',
     ),
   ];
 
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: kSecondaryColor,
-        selectedItemColor: kTextLightColor,
+        selectedItemColor: kPrimaryColor,
         unselectedItemColor: kgrey2,
         currentIndex: _bottomNavIndex,
         items: _bottomNavBarItems,

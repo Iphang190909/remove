@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset('assets/images/logo_login.png'),
+              Image.asset('assets/images/logo2.png'),
               const SizedBox(
                 height: 25,
               ),
